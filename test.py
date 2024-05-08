@@ -1,2 +1,7 @@
+
+from digital_clock import digital_clock
+import time
+
 def clock_test()-> None:
-    pass
+    clock= digital_clock()
+
