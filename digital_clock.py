@@ -1,3 +1,5 @@
+
+
 class digital_clock:
     #contructor inicializamos horas minitos y segundos
     def __init__(self,h: int=0,m: int=0,s: int=0) -> None:
@@ -7,6 +9,7 @@ class digital_clock:
         assert m < 60 and m >=0
         self.__m= m 
         assert s < 60 and s >=0
+        self.__s = s 
     
     def get_time(self)-> tuple[int,int,int]: 
         """  returns the current time the digital clock holds """
