@@ -1,5 +1,3 @@
-
-
 class digital_clock:
     #contructor inicializamos horas minitos y segundos
     def __init__(self,h: int=0,m: int=0,s: int=0) -> None:
@@ -19,11 +17,10 @@ class digital_clock:
         """clears the current time """
         self.__h, self.__m, self.__s = 0, 0, 0
 
-    def incremet(self)-> None: 
-        """Icrements one second the curren time """
-        self.__h= self.__h +1 if self.__m == 59 and self.__s==59 else self.__h
+    def increment(self)-> None:  # Corrección en el nombre del método
+        """Increments one second the current time """
+        self.__h = self.__h + 1 if self.__m == 59 and self.__s == 59 else self.__h
         self.__h = 0 if self.__h == 24 else self.__h 
-        self.__m= self.__m +1 if self.__s== 59 else self.__m
-        self.__m= 0 if self.__m == 60 else self.__m 
-        self.__s= self.__s +1 if self.__s <59 else 0
-        
+        self.__m = self.__m + 1 if self.__s == 59 else self.__m
+        self.__m = 0 if self.__m == 60 else self.__m 
+        self.__s = self.__s + 1 if self.__s < 59 else 0
